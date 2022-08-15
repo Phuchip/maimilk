@@ -156,7 +156,7 @@ class SiteController extends Controller
     {
         $model = new RegisterForm();
         if ($model->load(Yii::$app->request->post()) && $model->register()) {
-            Yii::$app->session->setFlash('success', 'Thank you for registration. Please check your inbox for verification email.');
+            Yii::$app->session->setFlash('success', 'Đăng ký thành công vui lòng đăng nhập');
             return $this->goHome();
         }
 

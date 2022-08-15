@@ -13,7 +13,7 @@ use yii\web\IdentityInterface;
  *
  * @property integer $id
  * @property string $username
- * @property string $password_hash
+ * @property string $password
  * @property string $password_reset_token
  * @property string $verification_token
  * @property string $email
@@ -25,10 +25,11 @@ use yii\web\IdentityInterface;
  */
 class User extends ActiveRecord implements IdentityInterface
 {
-    const STATUS_DELETED = 0;
+    const STATUS_NEW = 0;
     const STATUS_INACTIVE = 9;
     const STATUS_ACTIVE = 10;
 
+    public $auth_key;
 
     /**
      * {@inheritdoc}
@@ -39,23 +40,47 @@ class User extends ActiveRecord implements IdentityInterface
     }
 
     /**
-     * {@inheritdoc}
-     */
-    public function behaviors()
-    {
-        return [
-            TimestampBehavior::className(),
-        ];
-    }
-
-    /**
-     * {@inheritdoc}
+     * @inheritdoc
      */
     public function rules()
     {
         return [
-            ['status', 'default', 'value' => self::STATUS_INACTIVE],
-            ['status', 'in', 'range' => [self::STATUS_ACTIVE, self::STATUS_INACTIVE, self::STATUS_DELETED]],
+            [['username', 'password', 'name', 'email','status'], 'required'],
+
+            ['username', 'trim'],
+            ['username', 'string', 'min' => 2, 'max' => 255],
+            ['username', 'unique', 'targetClass' => '\common\models\User'],
+
+            ['email', 'trim'],
+            ['email', 'email'],
+            ['email', 'string', 'max' => 255],
+            ['email', 'unique', 'targetClass' => '\common\models\User'],
+
+            ['phone', 'trim'],
+            ['phone', 'string', 'max' => 255],
+            ['phone', 'unique', 'targetClass' => '\common\models\User'],
+
+            ['name', 'string','max'=>255],
+            ['avatar', 'string','max'=>255],
+        ];
+    }
+
+    /**
+     * @inheritdoc
+     */
+    public function attributeLabels()
+    {
+        return [
+            'user_id' => 'User ID',
+            'username' => 'Tên đăng nhập',
+            'password' => 'Mật khẩu',
+            'name' => 'Họ tên',
+            'email' => 'Email',
+            'phone' => 'Số điện thoại',
+            'avatar' => 'Ảnh đại diện',
+            'created' => 'Khởi tạo lúc',
+            'updated' => 'Cập nhật lúc',
+            'status' => 'Trạng thái',
         ];
     }
 
@@ -64,7 +89,7 @@ class User extends ActiveRecord implements IdentityInterface
      */
     public static function findIdentity($id)
     {
-        return static::findOne(['id' => $id, 'status' => self::STATUS_ACTIVE]);
+        return static::findOne(['id' => $id]);
     }
 
     /**
@@ -83,7 +108,7 @@ class User extends ActiveRecord implements IdentityInterface
      */
     public static function findByUsername($username)
     {
-        return static::findOne(['username' => $username, 'status' => self::STATUS_ACTIVE]);
+        return static::findOne(['username' => $username]);
     }
 
     /**
@@ -166,7 +191,7 @@ class User extends ActiveRecord implements IdentityInterface
      */
     public function validatePassword($password)
     {
-        return Yii::$app->security->validatePassword($password, $this->password_hash);
+        return Yii::$app->security->validatePassword($password, $this->password);
     }
 
     /**
@@ -176,7 +201,7 @@ class User extends ActiveRecord implements IdentityInterface
      */
     public function setPassword($password)
     {
-        $this->password_hash = Yii::$app->security->generatePasswordHash($password);
+        $this->password = Yii::$app->security->generatePasswordHash($password);
     }
 
     /**

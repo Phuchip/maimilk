@@ -10,4 +10,6 @@ return [
             'class' => 'yii\caching\FileCache',
         ],
     ],
+    'language' => 'vi-VN',
+    'timeZone' => 'Asia/Ho_Chi_Minh',
 ];
