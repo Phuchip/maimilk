@@ -9,6 +9,7 @@ use yii\bootstrap4\Breadcrumbs;
 use yii\bootstrap4\Html;
 use yii\bootstrap4\Nav;
 use yii\bootstrap4\NavBar;
+use Yii;
 
 AppAsset::register($this);
 ?>
@@ -20,9 +21,31 @@ AppAsset::register($this);
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <?php $this->registerCsrfMetaTags() ?>
     <title><?= Html::encode($this->title) ?></title>
+    <!-- Icon -->
+    <link rel="shortcut icon" href="/icon/favicon.ico" type="image/x-icon" />
+    <!-- Meta -->
+    <meta name="robots" content="noindex,nofollow" />
+    <meta name="keywords" content="<?= Html::encode($this->keywords) ?>" />
+    <meta name="description" content="<?= Html::encode($this->description) ?>" />
+
+    <meta property="og:locale" content="vi_VN" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="<?= Html::encode($this->title) ?>" />
+    <meta property="og:description" content="<?= Html::encode($this->description) ?>" />
+    <meta property="og:site_name" content="<?= Yii::$app->params['frontend_url'] ?>" />
+    <meta property="og:image" content="<?= Html::encode($this->image) ?>" />
+
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:description" content="<?= Html::encode($this->description) ?>" />
+    <meta name="twitter:title" content="<?= Html::encode($this->title) ?>" />
+
     <?php $this->head() ?>
+    <link rel="stylesheet" href="/css/home.css">
+    <link rel="stylesheet" href="/css/content.css">
     <link rel="stylesheet" href="/font-awesome-v5/css/all.min.css">
     <link rel="stylesheet" href="/tooltipster/css/tooltipster.bundle.min.css">
+    <link rel="stylesheet" href="/slick/slick.min.css">
+    <script src="/js/jquery.min.js"></script>
 </head>
 <body class="d-flex flex-column h-100">
 <?php $this->beginBody() ?>
@@ -45,8 +68,9 @@ AppAsset::register($this);
 <!-- End Footer -->
 
 <?php $this->endBody() ?>
-<script src="/js/jquery.min.js"></script>
 <script src="/js/lazysizes.min.js"></script>
+<script src="/slick/slick.min.js"></script>
+<script src="/js/home.js"></script>
 </body>
 </html>
 <?php $this->endPage();

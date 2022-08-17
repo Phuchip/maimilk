@@ -1,5 +1,5 @@
 main > .container {
-    padding: 70px 15px 20px;
+    padding: 80px 15px 20px;
 }
 
 .footer {
@@ -76,6 +76,11 @@ a.desc:after {
         text-align: left;
         width: 100%;
         padding: 10px 0;
+    }
+}
+@media(max-width : 500px){
+    main > .container{
+        padding: 66px 15px 20px;
     }
 }
 

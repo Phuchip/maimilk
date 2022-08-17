@@ -2,52 +2,49 @@
 
 /** @var yii\web\View $this */
 
+use common\components\HopeImageHelper;
+
 $this->title = 'My Yii Application';
+$this->keywords = 'Sữa';
+$this->description = 'Sữa';
+$this->image = '/images/logo.png';
 ?>
 <div class="site-index">
-
-    <div class="jumbotron text-center bg-transparent">
-        <h1 class="display-4">Congratulations!</h1>
-
-        <p class="lead">You have successfully created your Yii-powered application.</p>
-
-        <p><a class="btn btn-lg btn-success" href="http://www.yiiframework.com">Get started with Yii</a></p>
-    </div>
-
-    <div class="body-content">
-
-        <div class="row">
-            <div class="col-lg-4">
-                <h2>Heading</h2>
-
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-                    dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-                    ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-                    fugiat nulla pariatur.</p>
-
-                <p><a class="btn btn-outline-secondary" href="http://www.yiiframework.com/doc/">Yii Documentation &raquo;</a></p>
+    <div class="category-banner">
+        <div class="category">
+            <div class="category-title">
+                <p><i class="fa fa-bars"></i> Danh mục</p>
             </div>
-            <div class="col-lg-4">
-                <h2>Heading</h2>
-
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-                    dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-                    ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-                    fugiat nulla pariatur.</p>
-
-                <p><a class="btn btn-outline-secondary" href="http://www.yiiframework.com/forum/">Yii Forum &raquo;</a></p>
-            </div>
-            <div class="col-lg-4">
-                <h2>Heading</h2>
-
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-                    dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-                    ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-                    fugiat nulla pariatur.</p>
-
-                <p><a class="btn btn-outline-secondary" href="http://www.yiiframework.com/extensions/">Yii Extensions &raquo;</a></p>
+            <div class="category-content">
+                <ul class="category-list">
+                    <li>
+                        <a href=""><span>Mẹ bầu và sau sinh</span> <i class="fa fa-angle-right"></i></a>
+                        <ul></ul>
+                    </li>
+                    <li><span>Sữa và thực phẩm</span> <i class="fa fa-angle-right"></i></li>
+                    <li><span>Bỉm tã và vệ sinh</span> <i class="fa fa-angle-right"></i></li>
+                    <li><span>Đồ sơ sinh</span> <i class="fa fa-angle-right"></i></li>
+                    <li><span>Đồ dùng ăn uống</span> <i class="fa fa-angle-right"></i></li>
+                </ul>
             </div>
         </div>
-
+        <div class="banner">
+            <div class="list-banner">
+                <?= HopeImageHelper::createTagImage('/images/banner/banner1.webp') ?>
+                <?= HopeImageHelper::createTagImage('/images/banner/banner2.webp') ?>
+                <?= HopeImageHelper::createTagImage('/images/banner/banner3.webp') ?>
+            </div>
+        </div>
     </div>
 </div>
+<script>
+    $('.list-banner').slick({
+        infinite: true,
+        speed: 300,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        adaptiveHeight : false,
+        prevArrow:"<button type='button' class='slick-btn slick-left'><i class='fa fa-angle-left' aria-hidden='true'></i></button>",
+        nextArrow:"<button type='button' class='slick-btn slick-right'><i class='fa fa-angle-right' aria-hidden='true'></i></button>",
+    });
+</script>

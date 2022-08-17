@@ -1,0 +1,7 @@
+.category-banner{
+    display: grid;
+    grid-template-columns: 20% 80%;
+}
+.category-banner ul{
+    padding-inline-start: 0;
+}

@@ -3,87 +3,90 @@
 use common\components\HopeImageHelper;
 
 ?>
-<div class="row pt-md-4">
-    <!--        navbar-->
-    <div class="col-12">
-        <nav class="navbar navbar-expand-lg navbar-light">
-            <div class="container-fluid p-md-0">
-                <button class="navbar-toggler" type="button" id="button-navbar-menu" onclick="navbar_menu()">
-                    <i class="ic-menu"></i>
-                </button>
-                <div class="navbar-logo">
-                    <a class="navbar-brand" href="/">
-                    <?= HopeImageHelper::createTagImage('/images/logo.png','logo') ?>
-                    </a>
-                </div>
-                <div class="form-search">
-                    <form class="d-flex form-seach-submit" method="GET" onsubmit="return false">
-                        <input id="search-box pc_search dropdown show" name="keyword" onkeydown="searchdropdown()" required class="form-control me-2 search-box" type="search" placeholder="Nhập tên sản phẩm, tên hãng" aria-label="Search" autocomplete="off">
-                        <button class="btn btn-search" type="submit"><i class="ic-search"></i></button>
-                    </form>
-                    <!--dropdown-->
-                    <div id="suggestion-box" class="dropdown-content suggestion-box">
-                        <div class="icon-top-result">
-                            <i class="ic-top-result"></i>
+<header>
+    <nav class="navbar navbar-expand-md">
+        <div class="container">
+            <div class="navbar-logo">
+                <a class="navbar-brand" href="/"><?= HopeImageHelper::createTagImage('/images/logo.png', 'logo') ?></a>
+            </div>
+            <div class="search-area">
+                <form class="d-flex form-search" method="GET" onsubmit="return false">
+                    <input id="search-box" name="keyword" required class="form-control search-box" placeholder="Nhập tên sản phẩm, tên hãng" aria-label="Search" autocomplete="off">
+                    <button class="btn btn-search" type="submit"><i class="fa fa-search"></i></button>
+                </form>
+                <!--dropdown-->
+                <div id="suggestion-box" class="dropdown-content suggestion-box">
+                    <div class="result-search">
+                        <div class="bg-gray">
+                            <p class="suggestion-title">Có phải bạn muốn tìm</p>
                         </div>
-                        <div class="result-search">
-                            <div class="bg-gray">
-                                <p class="suggestion-title">Có phải bạn muốn tìm</p>
-                            </div>
-                            <div class="suggestion-body sugget_tag_pc">
-                            </div>
-                            <div class="bg-gray">
-                                <p class="suggestion-title">Sản phẩm gợi ý</p>
-                            </div>
-                            <div class="list-item-suggest suggest_pc">
-                            </div>
+                        <div class="suggestion-body">
+                            <ul class="list-group output-tag">
+                                <li class="list-group-item li-output-tag"><a href="/may-in-hoa-don-cam-tay-ID-12.html">máy in hóa đơn cầm tay</a></li>
+                                <li class="list-group-item li-output-tag"><a href="/may-in-hoa-don-mini-ID-13.html">máy in hóa đơn mini</a></li>
+                                <li class="list-group-item li-output-tag"><a href="/may-in-hoa-don-bluetooth-ID-14.html">máy in hóa đơn bluetooth</a></li>
+                            </ul>
+                        </div>
+                        <div class="bg-gray">
+                            <p class="suggestion-title">Sản phẩm gợi ý</p>
+                        </div>
+                        <div class="list-item-suggest">
                         </div>
                     </div>
                 </div>
-                <div class="collapse navbar-collapse" id="navbar-menu">
-                    <ul class=" navbar-nav me-auto mb-2 mb-lg-0">
-                        <li class="nav-item">
-                            <a class="nav-link <?= ($sub_url[1] == '')?'active':'' ?>" href="/">Trang chủ</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="">Hướng dẫn</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="">Tin tức</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="">Phần mềm quản lý bán hàng</a>
-                        </li>
-                    </ul>
-                </div>
-                <a href="javascript:void(0)" class="btn cart-btn d-flex" id="cart-btn">
-                    <i class="ic-cart"></i><span class="badge cart-badge"><?= $num ?></span>
-                </a>
             </div>
-        </nav>
-    </div>
-    <div class="form-search-mobile col-12">
-        <form class="d-flex form-seach-submit" onsubmit="return false">
-            <input id="search-box mobile_search dropdown show" onkeydown="searchdropdown2()" class="form-control me-2 search-box" type="search" placeholder="Nhập tên máy in hóa đơn, tên hãng" aria-label="Search" autocomplete="off">
-            <button class="btn btn-search" type="submit"><i class="ic-search"></i></button>
-        </form>
-        <!--dropdown-->
-        <div id="suggestion-box2" class="dropdown-content suggestion-box">
-            <div class="icon-top-result">
-                <i class="ic-top-result"></i>
-            </div>
-            <div class="result-search">
-                <div class="bg-gray">
-                    <p class="suggestion-title">Có phải bạn muốn tìm</p>
+            <div class="info-other">
+                <div class="info-account">
+                    <div class="icon">
+                        <i class="fa fa-user"></i>
+                    </div>
+                    <div class="text">
+                        <p>Tài khoản</p>
+                        <div class="action">
+                            <a href="/login">Đăng nhập</a>
+                            <i>|</i>
+                            <a href="/signup">Đăng ký</a>
+                        </div>
+                    </div>
                 </div>
-                <div class="suggestion-body sugget_tag_mb">
-                </div>
-                <div class="bg-gray">
-                    <p class="suggestion-title">Sản phẩm gợi ý</p>
-                </div>
-                <div class="list-item-suggest suggest_mobile">
+                <div class="cart">
+                    <div class="icon">
+                        <i class="fa fa-shopping-cart"></i>
+                    </div>
                 </div>
             </div>
         </div>
+    </nav>
+    <div class="menu-mobile">
+        <div class="content home-page active">
+            <div class="image">
+                    <?= HopeImageHelper::createTagImage('/icon/favicon.ico'); ?>
+            </div>
+            <span>Trang chủ</span>
+        </div>
+        <div class="content category">
+            <div class="icon-bottom">
+                <i class="fa fa-bars"></i>
+            </div>
+            <span>Danh mục</span>
+        </div>
+        <div class="content promotion">
+            <div class="image">
+                <?= HopeImageHelper::createTagImage('/icon/sale.png'); ?>
+            </div>
+            <span>Khuyến mãi</span>
+        </div>
+        <div class="content cart-bottom">
+            <div class="icon-bottom">
+                <i class="fa fa-shopping-cart"></i>
+            </div>
+            <span>Giỏ hàng</span>
+        </div>
+        <div class="content account">
+            <div class="icon-bottom">
+                <i class="fa fa-user"></i>
+            </div>
+            <span>Tài khoản</span>
+        </div>
     </div>
-</div>
+</header>
