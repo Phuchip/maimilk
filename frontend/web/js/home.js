@@ -27,3 +27,25 @@ $('.footer-column').click(function(){
         $(this).find('.footer-content').focus();
     }
 });
+$('.list-banner').slick({
+    infinite: false,
+    variableWidth: true,
+    speed: 300,
+    autoplay: true,
+    autoplaySpeed: 3000,
+    pauseOnFocus: false,
+    pauseOnHover: true,
+    pauseOnDotsHover: false,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    adaptiveHeight : false,
+    dots: true,
+    prevArrow:"<button type='button' class='slick-btn slick-left'><i class='icon-slick-left' aria-hidden='true'></i></button>",
+    nextArrow:"<button type='button' class='slick-btn slick-right'><i class='icon-slick-right' aria-hidden='true'></i></button>",
+});
+var slider = $('.list-banner');
+slider.on('afterChange', function(event, slick, currentSlide, nextSlide){
+    if (currentSlide === slick.$slides.length - 1 ) {
+        slider.slick('slickGoTo', 0);
+    }
+});

@@ -15,6 +15,9 @@ ul{
 p{
     margin-bottom: 0;
 }
+a:hover{
+    text-decoration: none;
+}
 .form-control:focus {
     border-color: none;
     -webkit-box-shadow: none;
@@ -22,6 +25,12 @@ p{
 }
 main{
     margin: 20px 0;
+}
+.icon-slick-right{
+    content: url(/icon/icon-slick-right.png);
+}
+.icon-slick-left{
+    content: url(/icon/icon-slick-left.png);
 }
 /* Header */
 .navbar-logo .navbar-brand {
