@@ -9,6 +9,7 @@ use yii\bootstrap4\Breadcrumbs;
 use yii\bootstrap4\Html;
 use yii\bootstrap4\Nav;
 use yii\bootstrap4\NavBar;
+use Yii;
 
 AppAsset::register($this);
 ?>
@@ -20,46 +21,38 @@ AppAsset::register($this);
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <?php $this->registerCsrfMetaTags() ?>
     <title><?= Html::encode($this->title) ?></title>
+    <!-- Icon -->
+    <link rel="shortcut icon" href="/icon/favicon.ico" type="image/x-icon" />
+    <!-- Meta -->
+    <meta name="robots" content="noindex,nofollow" />
+    <meta name="keywords" content="<?= Html::encode($this->keywords) ?>" />
+    <meta name="description" content="<?= Html::encode($this->description) ?>" />
+
+    <meta property="og:locale" content="vi_VN" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="<?= Html::encode($this->title) ?>" />
+    <meta property="og:description" content="<?= Html::encode($this->description) ?>" />
+    <meta property="og:site_name" content="<?= Yii::$app->params['frontend_url'] ?>" />
+    <meta property="og:image" content="<?= Html::encode($this->image) ?>" />
+
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:description" content="<?= Html::encode($this->description) ?>" />
+    <meta name="twitter:title" content="<?= Html::encode($this->title) ?>" />
+
     <?php $this->head() ?>
+    <link rel="stylesheet" href="/css/home.css">
+    <link rel="stylesheet" href="/css/content.css">
+    <link rel="stylesheet" href="/font-awesome-v5/css/all.min.css">
+    <link rel="stylesheet" href="/tooltipster/css/tooltipster.bundle.min.css">
+    <link rel="stylesheet" href="/slick/slick.min.css">
+    <script src="/js/jquery.min.js"></script>
 </head>
 <body class="d-flex flex-column h-100">
 <?php $this->beginBody() ?>
 
-<header>
-    <?php
-    NavBar::begin([
-        'brandLabel' => Yii::$app->name,
-        'brandUrl' => Yii::$app->homeUrl,
-        'options' => [
-            'class' => 'navbar navbar-expand-md navbar-dark bg-dark fixed-top',
-        ],
-    ]);
-    $menuItems = [
-        ['label' => 'Home', 'url' => ['/site/index']],
-        ['label' => 'About', 'url' => ['/site/about']],
-        ['label' => 'Contact', 'url' => ['/site/contact']],
-    ];
-    if (Yii::$app->user->isGuest) {
-        $menuItems[] = ['label' => 'Signup', 'url' => ['/site/signup']];
-        $menuItems[] = ['label' => 'Login', 'url' => ['/site/login']];
-    } else {
-        $menuItems[] = '<li>'
-            . Html::beginForm(['/site/logout'], 'post', ['class' => 'form-inline'])
-            . Html::submitButton(
-                'Logout (' . Yii::$app->user->identity->username . ')',
-                ['class' => 'btn btn-link logout']
-            )
-            . Html::endForm()
-            . '</li>';
-    }
-    echo Nav::widget([
-        'options' => ['class' => 'navbar-nav ml-auto'],
-        'items' => $menuItems,
-    ]);
-    NavBar::end();
-    ?>
-</header>
-
+<!-- Header -->
+<?= $this->render('_header') ?>
+<!-- End Header -->
 <main role="main" class="flex-shrink-0">
     <div class="container">
         <?= Breadcrumbs::widget([
@@ -70,14 +63,14 @@ AppAsset::register($this);
     </div>
 </main>
 
-<footer class="footer mt-auto py-3 text-muted">
-    <div class="container">
-        <p class="float-left">&copy; <?= Html::encode(Yii::$app->name) ?> <?= date('Y') ?></p>
-        <p class="float-right"><?= Yii::powered() ?></p>
-    </div>
-</footer>
+<!-- Footer -->
+<?= $this->render('_footer') ?>
+<!-- End Footer -->
 
 <?php $this->endBody() ?>
+<script src="/js/lazysizes.min.js"></script>
+<script src="/slick/slick.min.js"></script>
+<script src="/js/home.js"></script>
 </body>
 </html>
 <?php $this->endPage();

@@ -44,6 +44,8 @@ return [
             'enablePrettyUrl' => true,
             //'suffix' => '.html',
             'rules' => array(
+                'login' => 'site/login',
+                'signup' => 'site/signup',
                 '<controller:[\w-]+>/<action:\w+>/<id:\d+>'=> '<controller>/<action>',
                 '<controller:\w+>/<id:\d+>' => '<controller>/view',
                 '<controller:\w+>/<action:\w+>/<id:\d+>' => '<controller>/<action>',

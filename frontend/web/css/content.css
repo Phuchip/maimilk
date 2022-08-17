@@ -1,0 +1,115 @@
+.category-banner{
+    display: grid;
+    grid-template-columns: 20% 80%;
+}
+.category-banner ul{
+    padding-inline-start: 0;
+}
+.slick-btn{
+    background: none;
+    border: none;
+    position: absolute;
+    top: 46%;
+    z-index: 5;
+}
+.slick-btn.slick-left{
+    left: 0;
+}
+.slick-btn.slick-right{
+    right: 0;
+}
+.slick-dots {
+	display: flex;
+	justify-content: center;
+	margin: 0;
+	list-style-type: none;
+    position: absolute;
+    bottom: 1rem;
+    left: 46%;
+}
+.slick-dots li {
+    margin: 0 0.25rem;
+}
+
+.slick-dots li button {
+    display: block;
+    width: 10px;
+    height: 10px;
+    padding: 0;
+    border: none;
+    border-radius: 50%;
+    background-color: #b3b3b2;
+    text-indent: -9999px;
+}
+
+.slick-dots li.slick-active button {
+    background-color: #fff;
+}
+/* Menu */
+.category-banner{
+    position: relative;
+}
+.category-banner .category,.category-banner .category-list-child{
+    border: 1px solid #ebecf0;
+}
+.category-title{
+    padding: 5px 10px;
+}
+.category-title p{
+    font-size: 16px;
+    font-weight: bold;
+    color: #003189;
+}
+.category-list .category-item{
+    padding: 5px 10px;
+}
+.category-item a.category-item-title{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #636363;
+}
+.category-item a.category-item-title:hover{
+    color: #003189;
+}
+.category-item .category-list-child{
+    position: absolute;
+    left: 20%;
+    top: 0;
+    z-index: 10;
+    height: 100%;
+    width: 80%;
+}
+.category-list .category-item:hover .category-list-child{
+    display: flex;
+}
+.mega-menu-lv-1{
+    background-color: #fff;
+    display: flex;
+    justify-content: space-between;
+}
+.mega-menu-lv-1 .block-right{
+    max-width: 40%;
+    height: 100%;
+}
+.block-center{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 1rem 1.5rem;
+    width: 60%;
+}
+.block-center .item-title{
+    color: #003189;
+    font-weight: 700;
+    font-size: 13px;
+    border-bottom: 1px solid #ababab;
+}
+.mega-menu-lv-2{
+    margin: 0.5rem 1rem;
+}
+.mega-menu-lv-2 li{
+    padding: 3px 0;
+}
+.mega-menu-lv-2 li a{
+    color: #636363;
+}
