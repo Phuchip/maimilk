@@ -53,7 +53,14 @@ $this->image = '/images/logo.png';
                                         <li><a href="">Sữa Morinaga</a></li>
                                     </ul>
                                 </li>
-                                
+                                <li class="item">
+                                    <a href="" class="item-title">Thực phẩm dinh dưỡng</a>
+                                    <ul class="mega-menu-lv-2">
+                                        <li><a href="">Sữa Meiji</a></li>
+                                        <li><a href="">Sữa Glico ICreo</a></li>
+                                        <li><a href="">Sữa Morinaga</a></li>
+                                    </ul>
+                                </li>
                             </div>
                             <div class="block-right">
                                 <?= HopeImageHelper::createTagImage('/images/category/menu-1.webp') ?>
@@ -69,9 +76,15 @@ $this->image = '/images/logo.png';
         </div>
         <div class="banner">
             <div class="list-banner">
-                <?= HopeImageHelper::createTagImage('/images/banner/banner1.webp') ?>
-                <?= HopeImageHelper::createTagImage('/images/banner/banner2.webp') ?>
-                <?= HopeImageHelper::createTagImage('/images/banner/banner3.webp') ?>
+                <div class="banner-item">
+                    <?= HopeImageHelper::createTagImage('/images/banner/banner1.webp') ?>
+                </div>
+                <div class="banner-item">
+                    <?= HopeImageHelper::createTagImage('/images/banner/banner2.webp') ?>
+                </div>
+                <div class="banner-item">
+                    <?= HopeImageHelper::createTagImage('/images/banner/banner3.webp') ?>
+                </div>
             </div>
         </div>
     </div>

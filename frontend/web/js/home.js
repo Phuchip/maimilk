@@ -29,7 +29,7 @@ $('.footer-column').click(function(){
 });
 $('.list-banner').slick({
     infinite: false,
-    variableWidth: true,
+    variableWidth: false,
     speed: 300,
     autoplay: true,
     autoplaySpeed: 3000,
