@@ -2,6 +2,7 @@
 
 /** @var yii\web\View $this */
 
+use common\components\HopeHtmlHelper;
 use common\components\HopeImageHelper;
 
 $this->title = 'My Yii Application';
@@ -89,7 +90,7 @@ $this->image = '/images/logo.png';
         </div>
     </div>
     <div class="content">
-        <div class="panel">
+        <div class="panel best-seller">
             <div class="panel-head">
                 <div class="panel-title">
                     <h2 class="title text-uppercase">
@@ -120,9 +121,11 @@ $this->image = '/images/logo.png';
                                 </div>
                             </div>
                             <div class="product-bottom">
-                                <div class="product-rate"></div>
-                                <div class="product-favorite">
-                                    <i class="fa fa-heart"></i>
+                                <div class="product-rate">
+                                    <?= HopeHtmlHelper::createRateStar(); ?>
+                                </div>
+                                <div class="product-cart">
+                                    <i class="icon-cart"></i>
                                 </div>  
                             </div>
                         </div>
@@ -153,9 +156,11 @@ $this->image = '/images/logo.png';
                                 </div>
                             </div>
                             <div class="product-bottom">
-                                <div class="product-rate"></div>
-                                <div class="product-favorite">
-                                    <i class="fa fa-heart"></i>
+                                <div class="product-rate">
+                                    <?= HopeHtmlHelper::createRateStar(); ?>
+                                </div>
+                                <div class="product-cart">
+                                    <i class="icon-cart"></i>
                                 </div>  
                             </div>
                         </div>
@@ -186,9 +191,275 @@ $this->image = '/images/logo.png';
                                 </div>
                             </div>
                             <div class="product-bottom">
-                                <div class="product-rate"></div>
-                                <div class="product-favorite">
-                                    <i class="fa fa-heart-o"></i>
+                                <div class="product-rate">
+                                    <?= HopeHtmlHelper::createRateStar(); ?>
+                                </div>
+                                <div class="product-cart">
+                                    <i class="icon-cart"></i>
+                                </div>  
+                            </div>
+                        </div>
+                        <div class="product-other">
+                            <div class="product-label product-sale">
+                                <span>-20%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-item">
+                        <div class="product-head">
+                            <a href="" class="product-link">
+                                <?= HopeImageHelper::createTagImage('/images/product/test/product-1.jpg') ?>
+                            </a>
+                        </div>
+                        <div class="product-content">
+                            <div class="product-name">
+                                <h3 class="name">
+                                    <a href="" title="Siro Fitobimbi D3+K2 hỗ trợ hấp thu canxi xương - răng cho bé (30ml)">Siro Fitobimbi D3+K2 hỗ trợ hấp thu canxi xương - răng cho bé (30ml)</a>
+                                </h3>
+                            </div>
+                            <div class="product-price">
+                                <div class="price-new">
+                                    <p>300.000đ</p>
+                                </div>
+                                <div class="price-old">
+                                    <p>450.000đ</p>
+                                </div>
+                            </div>
+                            <div class="product-bottom">
+                                <div class="product-rate">
+                                    <?= HopeHtmlHelper::createRateStar(2,19); ?>
+                                </div>
+                                <div class="product-cart">
+                                    <i class="icon-cart"></i>
+                                </div>  
+                            </div>
+                        </div>
+                        <div class="product-other">
+                            <div class="product-label product-new">
+                                <span>Mới</span>
+                            </div>
+                            <div class="product-label product-sale">
+                                <span>-20%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-item">
+                        <div class="product-head">
+                            <a href="" class="product-link">
+                                <?= HopeImageHelper::createTagImage('/images/product/test/product-1.jpg') ?>
+                            </a>
+                        </div>
+                        <div class="product-content">
+                            <div class="product-name">
+                                <h3 class="name">
+                                    <a href="" title="Siro Fitobimbi D3+K2 hỗ trợ hấp thu canxi xương - răng cho bé (30ml)">Siro Fitobimbi D3+K2 hỗ trợ hấp thu canxi xương - răng cho bé (30ml)</a>
+                                </h3>
+                            </div>
+                            <div class="product-price">
+                                <div class="price-new">
+                                    <p>300.000đ</p>
+                                </div>
+                                <div class="price-old">
+                                    <p>450.000đ</p>
+                                </div>
+                            </div>
+                            <div class="product-bottom">
+                                <div class="product-rate">
+                                    <?= HopeHtmlHelper::createRateStar(); ?>
+                                </div>
+                                <div class="product-cart">
+                                    <i class="icon-cart"></i>
+                                </div>  
+                            </div>
+                        </div>
+                        <div class="product-other">
+                            <div class="product-label product-sale">
+                                <span>-20%</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="panel">
+            <div class="panel-head">
+                <div class="panel-title">
+                    <h2 class="title text-uppercase">
+                        <p>Sản phẩm nổi bật</p>
+                    </h2>
+                </div>
+            </div>
+            <div class="panel-content">
+                <div class="list-product">
+                    <div class="product-item">
+                        <div class="product-head">
+                            <a href="" class="product-link">
+                                <?= HopeImageHelper::createTagImage('/images/product/test/product-1.jpg') ?>
+                            </a>
+                        </div>
+                        <div class="product-content">
+                            <div class="product-name">
+                                <h3 class="name">
+                                    <a href="" title="Siro Fitobimbi D3+K2 hỗ trợ hấp thu canxi xương - răng cho bé (30ml)">Siro Fitobimbi D3+K2 hỗ trợ hấp thu canxi xương - răng cho bé (30ml)</a>
+                                </h3>
+                            </div>
+                            <div class="product-price">
+                                <div class="price-new">
+                                    <p>300.000đ</p>
+                                </div>
+                                <div class="price-old">
+                                    <p>450.000đ</p>
+                                </div>
+                            </div>
+                            <div class="product-bottom">
+                                <div class="product-rate">
+                                    <?= HopeHtmlHelper::createRateStar(); ?>
+                                </div>
+                                <div class="product-cart">
+                                    <i class="icon-cart"></i>
+                                </div>  
+                            </div>
+                        </div>
+                        <div class="product-other">
+                            <div class="product-label product-new">
+                                <span>Mới</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-item">
+                        <div class="product-head">
+                            <a href="" class="product-link">
+                                <?= HopeImageHelper::createTagImage('/images/product/test/product-1.jpg') ?>
+                            </a>
+                        </div>
+                        <div class="product-content">
+                            <div class="product-name">
+                                <h3 class="name">
+                                    <a href="" title="Siro Fitobimbi D3+K2 hỗ trợ hấp thu canxi xương - răng cho bé (30ml)">Siro Fitobimbi D3+K2 hỗ trợ hấp thu canxi xương - răng cho bé (30ml)</a>
+                                </h3>
+                            </div>
+                            <div class="product-price">
+                                <div class="price-new">
+                                    <p>300.000đ</p>
+                                </div>
+                                <div class="price-old">
+                                    <p>450.000đ</p>
+                                </div>
+                            </div>
+                            <div class="product-bottom">
+                                <div class="product-rate">
+                                    <?= HopeHtmlHelper::createRateStar(); ?>
+                                </div>
+                                <div class="product-cart">
+                                    <i class="icon-cart"></i>
+                                </div>  
+                            </div>
+                        </div>
+                        <div class="product-other">
+                            <div class="product-label product-hot">
+                                <span>Hot</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-item">
+                        <div class="product-head">
+                            <a href="" class="product-link">
+                                <?= HopeImageHelper::createTagImage('/images/product/test/product-1.jpg') ?>
+                            </a>
+                        </div>
+                        <div class="product-content">
+                            <div class="product-name">
+                                <h3 class="name">
+                                    <a href="" title="Siro Fitobimbi D3+K2 hỗ trợ hấp thu canxi xương - răng cho bé (30ml)">Siro Fitobimbi D3+K2 hỗ trợ hấp thu canxi xương - răng cho bé (30ml)</a>
+                                </h3>
+                            </div>
+                            <div class="product-price">
+                                <div class="price-new">
+                                    <p>300.000đ</p>
+                                </div>
+                                <div class="price-old">
+                                    <p>450.000đ</p>
+                                </div>
+                            </div>
+                            <div class="product-bottom">
+                                <div class="product-rate">
+                                    <?= HopeHtmlHelper::createRateStar(); ?>
+                                </div>
+                                <div class="product-cart">
+                                    <i class="icon-cart"></i>
+                                </div>  
+                            </div>
+                        </div>
+                        <div class="product-other">
+                            <div class="product-label product-sale">
+                                <span>-20%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-item">
+                        <div class="product-head">
+                            <a href="" class="product-link">
+                                <?= HopeImageHelper::createTagImage('/images/product/test/product-1.jpg') ?>
+                            </a>
+                        </div>
+                        <div class="product-content">
+                            <div class="product-name">
+                                <h3 class="name">
+                                    <a href="" title="Siro Fitobimbi D3+K2 hỗ trợ hấp thu canxi xương - răng cho bé (30ml)">Siro Fitobimbi D3+K2 hỗ trợ hấp thu canxi xương - răng cho bé (30ml)</a>
+                                </h3>
+                            </div>
+                            <div class="product-price">
+                                <div class="price-new">
+                                    <p>300.000đ</p>
+                                </div>
+                                <div class="price-old">
+                                    <p>450.000đ</p>
+                                </div>
+                            </div>
+                            <div class="product-bottom">
+                                <div class="product-rate">
+                                    <?= HopeHtmlHelper::createRateStar(2,19); ?>
+                                </div>
+                                <div class="product-cart">
+                                    <i class="icon-cart"></i>
+                                </div>  
+                            </div>
+                        </div>
+                        <div class="product-other">
+                            <div class="product-label product-new">
+                                <span>Mới</span>
+                            </div>
+                            <div class="product-label product-sale">
+                                <span>-20%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-item">
+                        <div class="product-head">
+                            <a href="" class="product-link">
+                                <?= HopeImageHelper::createTagImage('/images/product/test/product-1.jpg') ?>
+                            </a>
+                        </div>
+                        <div class="product-content">
+                            <div class="product-name">
+                                <h3 class="name">
+                                    <a href="" title="Siro Fitobimbi D3+K2 hỗ trợ hấp thu canxi xương - răng cho bé (30ml)">Siro Fitobimbi D3+K2 hỗ trợ hấp thu canxi xương - răng cho bé (30ml)</a>
+                                </h3>
+                            </div>
+                            <div class="product-price">
+                                <div class="price-new">
+                                    <p>300.000đ</p>
+                                </div>
+                                <div class="price-old">
+                                    <p>450.000đ</p>
+                                </div>
+                            </div>
+                            <div class="product-bottom">
+                                <div class="product-rate">
+                                    <?= HopeHtmlHelper::createRateStar(); ?>
+                                </div>
+                                <div class="product-cart">
+                                    <i class="icon-cart"></i>
                                 </div>  
                             </div>
                         </div>

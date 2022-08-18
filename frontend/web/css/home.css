@@ -1,3 +1,8 @@
+@font-face {
+    font-family: 'Roboto';
+    src: url('/font/Roboto-Light.ttf') format('ttf'),url('/font/Roboto-Bold.ttf') format('ttf'),url('/font/Roboto-Medium.ttf') format('ttf'),url('/font/Roboto-Regular.ttf') format('ttf');
+    font-display:'swap';
+}
 body {
     color: #333;
     font-family: 'Roboto','Helvetica Neue',Helvetica,Arial,sans-serif;
@@ -46,14 +51,23 @@ main{
     margin: 20px 0;
 }
 /* Icon */
-.fa-heart-o:before {
-    content: "\f08a";
+.fa-heart{
+    color: red;
 }
 .icon-slick-right{
     content: url(/icon/icon-slick-right.png);
 }
 .icon-slick-left{
     content: url(/icon/icon-slick-left.png);
+}
+.icon-star{
+    content: url(/icon/star.svg);
+}
+.icon-star.active{
+    filter: invert(12%) sepia(41%) saturate(4212%) hue-rotate(353deg) brightness(105%) contrast(89%);
+}
+.icon-cart{
+    content: url(/icon/cart.png);
 }
 /* Header */
 .navbar-logo .navbar-brand {
@@ -111,6 +125,7 @@ header .cart{
     position: relative;
 }
 .form-search .btn-search{
+    padding: 0.21rem 0.75rem;
     position: absolute;
     right: 0;
 }

@@ -51,11 +51,38 @@ $('.list-banner').slick({
             variableWidth: false,
           }
         },
-      ]
+    ]
 });
 var slider = $('.list-banner');
 slider.on('afterChange', function(event, slick, currentSlide, nextSlide){
     if (currentSlide === slick.$slides.length - 1 ) {
         slider.slick('slickGoTo', 0);
     }
+});
+$('.best-seller .list-product').slick({
+    variableWidth: false,
+    speed: 300,
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    adaptiveHeight : true,
+    prevArrow:"<button type='button' class='slick-btn slick-left'><i class='icon-slick-left' aria-hidden='true'></i></button>",
+    nextArrow:"<button type='button' class='slick-btn slick-right'><i class='icon-slick-right' aria-hidden='true'></i></button>",
+    responsive: [
+        {
+            breakpoint: 800,
+            settings: {
+                slidesToShow: 3,
+                slidesToScroll: 1,
+                variableWidth: false,
+            },
+        },
+        {
+            breakpoint: 500,
+            settings: {
+                slidesToShow: 2,
+                slidesToScroll: 1,
+                variableWidth: false,
+            },
+        },
+    ]
 });
