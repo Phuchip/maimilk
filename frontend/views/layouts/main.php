@@ -42,7 +42,7 @@ AppAsset::register($this);
     <?php $this->head() ?>
     <link rel="stylesheet" href="/css/home.css">
     <link rel="stylesheet" href="/css/content.css">
-    <link rel="stylesheet" href="/font-awesome-v5/css/all.min.css">
+    <link rel="stylesheet" href="/font-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="/tooltipster/css/tooltipster.bundle.min.css">
     <link rel="stylesheet" href="/slick/slick.min.css">
     <script src="/js/jquery.min.js"></script>

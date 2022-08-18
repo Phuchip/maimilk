@@ -15,6 +15,25 @@ ul{
 p{
     margin-bottom: 0;
 }
+h1{
+    font-size: 22px;
+    line-height: 26px;
+}
+h2{
+    font-size: 20px;
+    line-height: 23px;
+}
+h3{
+    font-size: 13px;
+    line-height: 18px;
+}
+h4{
+    font-size: 12px;
+    line-height: 15px;
+}
+h1,h2,h3,h4{
+    margin-bottom: 0;
+}
 a:hover{
     text-decoration: none;
 }
@@ -25,6 +44,10 @@ a:hover{
 }
 main{
     margin: 20px 0;
+}
+/* Icon */
+.fa-heart-o:before {
+    content: "\f08a";
 }
 .icon-slick-right{
     content: url(/icon/icon-slick-right.png);
