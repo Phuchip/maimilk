@@ -29,7 +29,7 @@ $('.footer-column').click(function(){
 });
 $('.list-banner').slick({
     infinite: false,
-    variableWidth: false,
+    variableWidth: true,
     speed: 300,
     autoplay: true,
     autoplaySpeed: 3000,
@@ -42,6 +42,16 @@ $('.list-banner').slick({
     dots: true,
     prevArrow:"<button type='button' class='slick-btn slick-left'><i class='icon-slick-left' aria-hidden='true'></i></button>",
     nextArrow:"<button type='button' class='slick-btn slick-right'><i class='icon-slick-right' aria-hidden='true'></i></button>",
+    responsive: [
+        {
+          breakpoint: 800,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            variableWidth: false,
+          }
+        },
+      ]
 });
 var slider = $('.list-banner');
 slider.on('afterChange', function(event, slick, currentSlide, nextSlide){
