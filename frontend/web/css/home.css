@@ -1,11 +1,33 @@
 @font-face {
-    font-family: 'Roboto';
-    src: url('/font/Roboto-Light.ttf') format('ttf'),url('/font/Roboto-Bold.ttf') format('ttf'),url('/font/Roboto-Medium.ttf') format('ttf'),url('/font/Roboto-Regular.ttf') format('ttf');
-    font-display:'swap';
+	font-family: GoogleSans;
+	src: url('/fonts/GoogleSans/GoogleSans-Regular.woff');
+	font-weight: 400;
 }
+
+@font-face {
+	font-family: GoogleSans;
+	src: url('/fonts/GoogleSans/GoogleSans-Medium.woff');
+    display : swap;
+	font-weight: 500;
+}
+
+@font-face {
+	font-family: GoogleSans;
+	src: url('/fonts/GoogleSans/GoogleSans-Bold.woff');
+    display : swap;
+	font-weight: 600;
+}
+
+@font-face {
+	font-family: GoogleSans;
+	src: url('/fonts/GoogleSans/GoogleSans-Bold.woff');
+    display : swap;
+	font-weight: 700;
+}
+
 body {
     color: #333;
-    font-family: 'Roboto','Helvetica Neue',Helvetica,Arial,sans-serif;
+    font-family: 'GoogleSans' !important;
     font-size: 14px;
     line-height: 1.29;
     -webkit-box-sizing: border-box;
@@ -68,6 +90,9 @@ main{
 }
 .icon-cart{
     content: url(/icon/cart.png);
+}
+.icon-scroll-top{
+    content: url(/icon/scroll-top.svg);
 }
 /* Header */
 .navbar-logo .navbar-brand {
@@ -146,6 +171,9 @@ header .cart{
     display: none;
     position: absolute;
     width : 100%;
+}
+.suggestion-box.show{
+    display: block;
 }
 .result-search {
     box-shadow: 2px 2px 5px #d4d4d4;
@@ -389,6 +417,20 @@ header .navbar{
 .page-footer .footer-columns .footer-column .footer-title i{
     display: none;
 }
+#scroll_top {
+    position: fixed;
+    display: none;
+    bottom: 20px;
+    right: 30px;
+    z-index: 99;
+    width: 54px;
+    height: 54px;
+    border-radius: 50%;
+    background: #007ff2;
+    border: 1.5px solid rgba(255, 255, 255, 0.6);
+    box-sizing: border-box;
+    box-shadow: 0px 2px 4px rgb(0 0 0 / 25%);
+}
 /* End Footer */
 @media(max-width:1200px){
     .search-area{
@@ -410,6 +452,12 @@ header .navbar{
     }
     .page-footer .footer-columns .footer-column{
         width: calc(66%/2);
+    }
+    h2{
+        font-size: 18px;
+    }
+    .slick-btn i{
+        width: 14px;
     }
     
 }

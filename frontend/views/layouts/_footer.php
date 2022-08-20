@@ -73,4 +73,5 @@ use common\components\HopeImageHelper;
             </div>
         </div>
     </div>
+    <button id="scroll_top" title="Go to top"><i class="icon-scroll-top"></i></button>
 </footer>
