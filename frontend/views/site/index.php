@@ -148,6 +148,28 @@ $this->image = '/images/logo.png';
                 </div>
             </div>
         </div>
+        <div class="panel category">
+            <div class="panel-head">
+                <div class="panel-title">
+                    <h2 class="title text-uppercase">
+                        <p>Sữa phát triển chiều cao</p>
+                    </h2>
+                </div>
+                <div class="see-more">
+                    <a href="">Xem thêm >></a>
+                </div>
+            </div>
+            <div class="panel-content">
+                <div class="list-product">
+                    <?= HopeHtmlHelper::createProductTest(); ?>
+                </div>
+                <div class="btn-see-all">
+                    <button type="button" class="see-all">
+                        <a href="">Xem tất cả</a>
+                    </button>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
 <div class="terms-policy">

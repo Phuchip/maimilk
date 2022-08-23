@@ -125,3 +125,24 @@ $('.best-seller .list-product').slick({
         },
     ]
 });
+//Lazyload
+width = $(window).width();
+if(width < 480){
+    $(window).scroll(function() {
+        if ($(this).scrollTop() > 0) {
+          $('.category-banner').show();
+        }
+    });
+}
+$('.menu-mobile .content.category').click(function(){
+    if($(this).hasClass('active')){
+        $(this).removeClass('active');
+        $('body').removeClass('menu-mobile-active');
+        $('.section-menu-mobile').removeClass('active');
+    }else{
+        $('.menu-mobile .content').removeClass('active');
+        $(this).addClass('active');
+        $('.section-menu-mobile').addClass('active');
+        $('body').addClass('menu-mobile-active');
+    }
+});

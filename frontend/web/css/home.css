@@ -243,10 +243,14 @@ header .navbar{
     background-color: #fff;
     border-top: 1px solid #d9d9d9;
 }
-.menu-mobile .content{
+body.menu-mobile-active{
+    position: fixed;
+}
+.menu-mobile .content,.menu-mobile .content a{
     display: grid;
     justify-content: center;
     padding: 5px;
+    color: #333;
 }
 .menu-mobile .content.active{
     background-color: #f7f9fb;
@@ -274,6 +278,61 @@ header .navbar{
     text-align: center;
     font-weight: 300;
     margin-top: 5px;
+}
+/* Category Menu Mobile */
+.section-menu-mobile{
+    display: none;
+}
+.section-menu-mobile.active{
+    display: block;
+}
+.mega-menu-mobile{
+    display: block !important;
+    position: fixed !important;
+    padding-top: 1rem;
+    height: calc(100% - 57px);
+    width: 100%;
+    left: 0;
+    top: 0;
+    background: #fff;
+    z-index: 2000;
+    overflow: hidden;
+    margin: 0;
+    border: none;
+    border-radius: 0;
+    overflow-y: scroll;
+}
+.mega-menu .mega-menu-lv1{
+    display: flex;
+    flex-wrap: wrap;
+    height: 100%;
+    padding-left: 0;
+}
+.mega-menu .mega-menu-lv1 .mega-menu-lv1-item{
+    display: inline-block;
+    vertical-align: top;
+    text-align: center;
+    width: calc(100%/3);
+}
+.mega-menu-lv1-item a{
+    font-weight: 300;
+    padding: 10px 15px;
+    text-transform: capitalize;
+    word-wrap: break-word;
+    position: relative;
+    display: block;
+    text-decoration: none;
+    color: #003189;
+}
+.mega-menu-lv1-item a img{
+    display: block;
+    margin: 0 auto 0.5rem;
+    height: auto;
+    max-width: 100%;
+    width: 48px;
+}
+.mega-menu-lv1-item a span{
+    color: #636363;
 }
 /* End Header */
 /* Footer */
@@ -488,7 +547,7 @@ header .navbar{
         background-color: transparent;
         box-shadow: none;
     }
-    .btn-search{
+    .form-search .btn-search{
         padding: 0.8rem 0.75rem;
     }
     .menu-mobile{

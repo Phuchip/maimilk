@@ -314,6 +314,9 @@ main .content{
 .terms-policy-item span{
     margin-left: 10px;
 }
+.content.category.active i,.content.category.active span{
+    color: #003189;
+}
 @media(max-width: 1200px){
     .list-product{
         grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -349,7 +352,7 @@ main .content{
         display: none;
     }
     .category-banner{
-        display: block;
+        display: none;
     }
     .list-product{
         grid-template-columns: 1fr 1fr;
@@ -366,6 +369,17 @@ main .content{
     }
     .btn-see-all{
         display: block;
+    }
+    .slick-dots{
+        left: 43%;
+    }
+    #scroll_top{
+        width: 35px;
+        height: 35px;
+        bottom: 70px;
+    }
+    .icon-scroll-top{
+        width: 16px;
     }
 }
 @media(max-width:400px){

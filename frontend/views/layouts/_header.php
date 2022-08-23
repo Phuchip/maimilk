@@ -59,10 +59,12 @@ use common\components\HopeImageHelper;
     </nav>
     <div class="menu-mobile">
         <div class="content home-page active">
-            <div class="image">
-                    <?= HopeImageHelper::createTagImage('/icon/favicon.ico'); ?>
-            </div>
-            <span>Trang chủ</span>
+            <a href="">
+                <div class="image">
+                        <?= HopeImageHelper::createTagImage('/icon/favicon.ico'); ?>
+                </div>
+                <span>Trang chủ</span>
+            </a>
         </div>
         <div class="content category">
             <div class="icon-bottom">
@@ -71,22 +73,96 @@ use common\components\HopeImageHelper;
             <span>Danh mục</span>
         </div>
         <div class="content promotion">
-            <div class="image">
-                <?= HopeImageHelper::createTagImage('/icon/sale.png'); ?>
-            </div>
-            <span>Khuyến mãi</span>
+            <a href="">
+                <div class="image">
+                    <?= HopeImageHelper::createTagImage('/icon/sale.png'); ?>
+                </div>
+                <span>Khuyến mãi</span>
+            </a>
         </div>
         <div class="content cart-bottom">
-            <div class="icon-bottom">
-                <i class="fa fa-shopping-cart"></i>
-            </div>
-            <span>Giỏ hàng</span>
+            <a href="">
+                <div class="icon-bottom">
+                    <i class="fa fa-shopping-cart"></i>
+                </div>
+                <span>Giỏ hàng</span>
+            </a>
         </div>
         <div class="content account">
-            <div class="icon-bottom">
-                <i class="fa fa-user"></i>
-            </div>
-            <span>Tài khoản</span>
+            <a href="">
+                <div class="icon-bottom">
+                    <i class="fa fa-user"></i>
+                </div>
+                <span>Tài khoản</span>
+            </a>
         </div>
+    </div>
+    <div class="section-menu-mobile">
+        <nav class="navigation mega-menu-mobile" data-action="navigation">
+            <div class="mega-menu">
+                <ul class="mega-menu-lv1">
+                    <li class="mega-menu-lv1-item">
+                        <a href="">
+                            <?= HopeImageHelper::createTagImage('/images/category/me-bau-va-sau-sinh.png') ?>
+                            <span>Mẹ bầu và sau sinh</span>
+                        </a>
+                    </li>
+                    <li class="mega-menu-lv1-item">
+                        <a href="">
+                            <?= HopeImageHelper::createTagImage('/images/category/sua-va-thuc-pham.png') ?>
+                            <span>Sữa và thực phẩm</span>
+                        </a>
+                    </li>
+                    <li class="mega-menu-lv1-item">
+                        <a href="">
+                            <?= HopeImageHelper::createTagImage('/images/category/ta-bim.png') ?>
+                            <span>Bỉm tã và Vệ sinh</span>
+                        </a>
+                    </li>
+                    <li class="mega-menu-lv1-item">
+                        <a href="">
+                            <?= HopeImageHelper::createTagImage('/images/category/do-so-sinh.png') ?>
+                            <span>Đồ sơ sinh</span>
+                        </a>
+                    </li>
+                    <li class="mega-menu-lv1-item">
+                        <a href="">
+                            <?= HopeImageHelper::createTagImage('/images/category/do-dung-an-uong.png') ?>
+                            <span>Đồ dùng ăn uống</span>
+                        </a>
+                    </li>
+                    <li class="mega-menu-lv1-item">
+                        <a href="">
+                            <?= HopeImageHelper::createTagImage('/images/category/thoi-trang.png') ?>
+                            <span>Thời trang và phụ kiện</span>
+                        </a>
+                    </li>
+                    <li class="mega-menu-lv1-item">
+                        <a href="">
+                            <?= HopeImageHelper::createTagImage('/images/category/do-choi.png') ?>
+                            <span>Đồ chơi và học tập</span>
+                        </a>
+                    </li>
+                    <li class="mega-menu-lv1-item">
+                        <a href="">
+                            <?= HopeImageHelper::createTagImage('/images/category/xe-day.png') ?>
+                            <span>Xe - đai - địu</span>
+                        </a>
+                    </li>
+                    <li class="mega-menu-lv1-item">
+                        <a href="">
+                            <?= HopeImageHelper::createTagImage('/images/category/noi-giuong-cui.png') ?>
+                            <span>Nôi - giường - cũi</span>
+                        </a>
+                    </li>
+                    <li class="mega-menu-lv1-item">
+                        <a href="">
+                            <?= HopeImageHelper::createTagImage('/images/category/giat-xa-tam-goi.png') ?>
+                            <span>Giặt xả và tắm gội</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
     </div>
 </header>
