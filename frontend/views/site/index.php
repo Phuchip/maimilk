@@ -5,7 +5,7 @@
 use common\components\HopeHtmlHelper;
 use common\components\HopeImageHelper;
 
-$this->title = 'My Yii Application';
+$this->title = 'Trang chủ';
 $this->keywords = 'Sữa';
 $this->description = 'Sữa';
 $this->image = '/images/logo.png';

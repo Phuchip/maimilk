@@ -36,8 +36,10 @@ body {
     overflow-x: hidden;
     font-weight: 400;
 }
-ul{
+ul,ol{
     list-style: none;
+    margin: 0;
+    padding: 0;
 }
 p{
     margin-bottom: 0;
@@ -73,6 +75,10 @@ main{
     margin: 20px 0;
 }
 /* Icon */
+.fa-award{
+    content: url(/icon/award-solid.svg);
+    width: 14px;
+}
 .fa-heart{
     color: red;
 }
@@ -93,6 +99,9 @@ main{
 }
 .icon-scroll-top{
     content: url(/icon/scroll-top.svg);
+}
+.icon-cart-white{
+    content: url(/icon/cart-white.png);
 }
 /* Header */
 .navbar-logo .navbar-brand {
