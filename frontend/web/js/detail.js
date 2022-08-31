@@ -3,7 +3,6 @@ $('#multiple-items').slick({
     speed: 300,
     slidesToShow: 1,
     slidesToScroll: 1,
-    autoplaySpeed :3000,
     pauseOnFocus: true,
     pauseOnHover: true,
     adaptiveHeight : false,
@@ -13,12 +12,24 @@ $('#multiple-items').slick({
 });
 $("#thumbnail-items").slick({
     infinite: true,
-    slidesToShow: 3,
+    slidesToShow: 4,
     focusOnSelect : true,
     arrows: false,
-    autoplaySpeed :3000,
     pauseOnFocus: true,
     pauseOnHover: true,
     adaptiveHeight : false,
     asNavFor: "#multiple-items"
+});
+$('.btn-text').click(function(){
+    var parent = $(this).parent('.group-btn-text');
+    var collapse = parent.find('.collapse');
+    if(collapse.hasClass('show')){
+        collapse.removeClass('show');
+    }else{
+        collapse.addClass('show');
+    }
+});
+
+$('.btn-add-to-cart').click(function(){
+    notification('success','Thêm vào giỏ hàng thành công');
 });

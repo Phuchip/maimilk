@@ -74,6 +74,12 @@ a:hover{
 main{
     margin: 20px 0;
 }
+#jGrowl{
+    z-index: 9999 !important;
+}
+.bg-danger{
+    background-color: red;
+}
 /* Icon */
 .fa-award{
     content: url(/icon/award-solid.svg);

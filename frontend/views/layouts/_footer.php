@@ -75,3 +75,4 @@ use common\components\HopeImageHelper;
     </div>
     <button id="scroll_top" title="Go to top"><i class="icon-scroll-top"></i></button>
 </footer>
+<div id="jGrowl" class="bottom-right jGrowl"><div class="jGrowl-notification"></div></div>

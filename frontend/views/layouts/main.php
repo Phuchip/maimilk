@@ -41,6 +41,7 @@ AppAsset::register($this);
 
     <?php $this->head() ?>
     <link rel="stylesheet" href="/css/home.css">
+    <link rel="stylesheet" href="/css/notifications.css">
     <link rel="stylesheet" href="/css/content.css">
     <link rel="stylesheet" href="/css/product.css">
     <link rel="stylesheet" href="/font-awesome/css/font-awesome.min.css">
@@ -73,6 +74,7 @@ AppAsset::register($this);
 <script src="/slick/slick.min.js"></script>
 <script src="/js/home.js"></script>
 <script src="/js/detail.js"></script>
+<script src="/js/notifications.js"></script>
 </body>
 </html>
 <?php $this->endPage();
