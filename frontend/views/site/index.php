@@ -2,9 +2,10 @@
 
 /** @var yii\web\View $this */
 
+use common\components\HopeHtmlHelper;
 use common\components\HopeImageHelper;
 
-$this->title = 'My Yii Application';
+$this->title = 'Trang chủ';
 $this->keywords = 'Sữa';
 $this->description = 'Sữa';
 $this->image = '/images/logo.png';
@@ -89,7 +90,7 @@ $this->image = '/images/logo.png';
         </div>
     </div>
     <div class="content">
-        <div class="panel">
+        <div class="panel best-seller">
             <div class="panel-head">
                 <div class="panel-title">
                     <h2 class="title text-uppercase">
@@ -99,107 +100,93 @@ $this->image = '/images/logo.png';
             </div>
             <div class="panel-content">
                 <div class="list-product">
-                    <div class="product-item">
-                        <div class="product-head">
-                            <a href="" class="product-link">
-                                <?= HopeImageHelper::createTagImage('/images/product/test/product-1.jpg') ?>
-                            </a>
-                        </div>
-                        <div class="product-content">
-                            <div class="product-name">
-                                <h3 class="name">
-                                    <a href="" title="Siro Fitobimbi D3+K2 hỗ trợ hấp thu canxi xương - răng cho bé (30ml)">Siro Fitobimbi D3+K2 hỗ trợ hấp thu canxi xương - răng cho bé (30ml)</a>
-                                </h3>
-                            </div>
-                            <div class="product-price">
-                                <div class="price-new">
-                                    <p>300.000đ</p>
-                                </div>
-                                <div class="price-old">
-                                    <p>450.000đ</p>
-                                </div>
-                            </div>
-                            <div class="product-bottom">
-                                <div class="product-rate"></div>
-                                <div class="product-favorite">
-                                    <i class="fa fa-heart"></i>
-                                </div>  
-                            </div>
-                        </div>
-                        <div class="product-other">
-                            <div class="product-label product-new">
-                                <span>Mới</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="product-item">
-                        <div class="product-head">
-                            <a href="" class="product-link">
-                                <?= HopeImageHelper::createTagImage('/images/product/test/product-1.jpg') ?>
-                            </a>
-                        </div>
-                        <div class="product-content">
-                            <div class="product-name">
-                                <h3 class="name">
-                                    <a href="" title="Siro Fitobimbi D3+K2 hỗ trợ hấp thu canxi xương - răng cho bé (30ml)">Siro Fitobimbi D3+K2 hỗ trợ hấp thu canxi xương - răng cho bé (30ml)</a>
-                                </h3>
-                            </div>
-                            <div class="product-price">
-                                <div class="price-new">
-                                    <p>300.000đ</p>
-                                </div>
-                                <div class="price-old">
-                                    <p>450.000đ</p>
-                                </div>
-                            </div>
-                            <div class="product-bottom">
-                                <div class="product-rate"></div>
-                                <div class="product-favorite">
-                                    <i class="fa fa-heart"></i>
-                                </div>  
-                            </div>
-                        </div>
-                        <div class="product-other">
-                            <div class="product-label product-hot">
-                                <span>Hot</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="product-item">
-                        <div class="product-head">
-                            <a href="" class="product-link">
-                                <?= HopeImageHelper::createTagImage('/images/product/test/product-1.jpg') ?>
-                            </a>
-                        </div>
-                        <div class="product-content">
-                            <div class="product-name">
-                                <h3 class="name">
-                                    <a href="" title="Siro Fitobimbi D3+K2 hỗ trợ hấp thu canxi xương - răng cho bé (30ml)">Siro Fitobimbi D3+K2 hỗ trợ hấp thu canxi xương - răng cho bé (30ml)</a>
-                                </h3>
-                            </div>
-                            <div class="product-price">
-                                <div class="price-new">
-                                    <p>300.000đ</p>
-                                </div>
-                                <div class="price-old">
-                                    <p>450.000đ</p>
-                                </div>
-                            </div>
-                            <div class="product-bottom">
-                                <div class="product-rate"></div>
-                                <div class="product-favorite">
-                                    <i class="fa fa-heart-o"></i>
-                                </div>  
-                            </div>
-                        </div>
-                        <div class="product-other">
-                            <div class="product-label product-sale">
-                                <span>-20%</span>
-                            </div>
-                        </div>
-                    </div>
+                    <?= HopeHtmlHelper::createProductTest(); ?>
                 </div>
             </div>
         </div>
+        <div class="panel">
+            <div class="panel-head">
+                <div class="panel-title">
+                    <h2 class="title text-uppercase">
+                        <p>Sản phẩm nổi bật</p>
+                    </h2>
+                </div>
+                <div class="see-more">
+                    <a href="">Xem thêm >></a>
+                </div>
+            </div>
+            <div class="panel-content">
+                <div class="list-product">
+                    <?= HopeHtmlHelper::createProductTest(); ?>
+                </div>
+                <div class="btn-see-all">
+                    <button type="button" class="see-all">
+                        <a href="">Xem tất cả</a>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="panel category">
+            <div class="panel-head">
+                <div class="panel-title">
+                    <h2 class="title text-uppercase">
+                        <p>Sữa tăng cân cho bé</p>
+                    </h2>
+                </div>
+                <div class="see-more">
+                    <a href="">Xem thêm >></a>
+                </div>
+            </div>
+            <div class="panel-content">
+                <div class="list-product">
+                    <?= HopeHtmlHelper::createProductTest(); ?>
+                </div>
+                <div class="btn-see-all">
+                    <button type="button" class="see-all">
+                        <a href="">Xem tất cả</a>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="panel category">
+            <div class="panel-head">
+                <div class="panel-title">
+                    <h2 class="title text-uppercase">
+                        <p>Sữa phát triển chiều cao</p>
+                    </h2>
+                </div>
+                <div class="see-more">
+                    <a href="">Xem thêm >></a>
+                </div>
+            </div>
+            <div class="panel-content">
+                <div class="list-product">
+                    <?= HopeHtmlHelper::createProductTest(); ?>
+                </div>
+                <div class="btn-see-all">
+                    <button type="button" class="see-all">
+                        <a href="">Xem tất cả</a>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="terms-policy">
+    <div class="terms-policy-item">
+        <?= HopeImageHelper::createTagImage('/icon/chinhhang.webp') ?>
+        <span class="text-uppercase">100% Hàng Chính Hãng</span>
+    </div>
+    <div class="terms-policy-item">
+        <?= HopeImageHelper::createTagImage('/icon/freeship.webp') ?>
+        <span class="text-uppercase">Giao hàng siêu tốc</span>
+    </div>
+    <div class="terms-policy-item">
+        <?= HopeImageHelper::createTagImage('/icon/changeproduct.webp') ?>
+        <span class="text-uppercase">365 ngày đổi trả hàng</span>
+    </div>
+    <div class="terms-policy-item">
+        <?= HopeImageHelper::createTagImage('/icon/tichluy.webp') ?>
+        <span class="text-uppercase">Tích luỹ khi mua sản phẩm</span>
     </div>
 </div>
