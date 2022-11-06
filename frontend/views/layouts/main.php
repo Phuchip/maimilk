@@ -40,10 +40,13 @@ AppAsset::register($this);
     <meta name="twitter:title" content="<?= Html::encode($this->title) ?>" />
 
     <?php $this->head() ?>
+    
     <link rel="stylesheet" href="/css/home.css">
     <link rel="stylesheet" href="/css/notifications.css">
     <link rel="stylesheet" href="/css/content.css">
-    <link rel="stylesheet" href="/css/product.css">
+    <?php if($this->css): ?>
+    <link rel="stylesheet" href="<?= $this->css ?>">
+    <?php endif; ?>
     <link rel="stylesheet" href="/font-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="/tooltipster/css/tooltipster.bundle.min.css">
     <link rel="stylesheet" href="/slick/slick.min.css">

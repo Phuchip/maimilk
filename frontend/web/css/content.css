@@ -270,7 +270,7 @@ main .content{
 .product-other{
     position: absolute;
 }
-.best-seller .product-other{
+.best-seller .product-other,.product-relate .product-other{
     top: 1rem;
     left: 1rem;
 }
