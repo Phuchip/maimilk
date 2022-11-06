@@ -34,19 +34,37 @@ class HopeHtmlHelper
         return $html;
     }
 
+    public function createRateProduct()
+    {
+        $arrStar = [5,4,3,2,1];
+        $html = '<ul>';
+        foreach($arrStar as $star){
+            $html .= '<li class="active">
+                <span class="number">'.$star.'</span>
+                <i class="icon-star-grey"></i>
+                <div class="bg-line-color">
+                    <p class="time-line-star" style="width:'.$star.'0%"></p>
+                </div>
+                <p class="rate-txt">'.$star.' Đánh giá</p>
+            </li>';
+        }
+        $html .= '</ul>';
+        return $html;
+    }
+
     public function createProductTest()
     {
         $html = '';
         $html = '<div class="product-item">
                 <div class="product-head">
-                    <a href="" class="product-link">
+                    <a href="product" class="product-link">
                         <img class="lazyload" src="/images/loading.gif" data-src="/images/product/test/product-1.jpg" alias="" onerror="this.onerror=null;this.src=&quot;/images/error.png&quot;;">
                     </a>
                 </div>
                 <div class="product-content">
                     <div class="product-name">
                         <h3 class="name">
-                            <a href="" title="Siro Fitobimbi D3+K2 hỗ trợ hấp thu canxi xương - răng cho bé (30ml)">Siro Fitobimbi D3+K2 hỗ trợ hấp thu canxi xương - răng cho bé (30ml)</a>
+                            <a href="product" title="Siro Fitobimbi D3+K2 hỗ trợ hấp thu canxi xương - răng cho bé (30ml)">Siro Fitobimbi D3+K2 hỗ trợ hấp thu canxi xương - răng cho bé (30ml)</a>
                         </h3>
                     </div>
                     <div class="product-price">
@@ -80,14 +98,14 @@ class HopeHtmlHelper
             </div>
             <div class="product-item">
                 <div class="product-head">
-                    <a href="" class="product-link">
+                    <a href="product" class="product-link">
                         <img class="lazyload" src="/images/loading.gif" data-src="/images/product/test/product-2.jpg" alias="Nước rửa bình sữa Organic Lamoon chai 500ml" onerror="this.onerror=null;this.src=&quot;/images/error.png&quot;;">
                     </a>
                 </div>
                 <div class="product-content">
                     <div class="product-name">
                         <h3 class="name">
-                            <a href="" title="Nước rửa bình sữa Organic Lamoon chai 500ml">Nước rửa bình sữa Organic Lamoon chai 500ml</a>
+                            <a href="product" title="Nước rửa bình sữa Organic Lamoon chai 500ml">Nước rửa bình sữa Organic Lamoon chai 500ml</a>
                         </h3>
                     </div>
                     <div class="product-price">
@@ -121,14 +139,14 @@ class HopeHtmlHelper
             </div>
             <div class="product-item">
                 <div class="product-head">
-                    <a href="" class="product-link">
+                    <a href="product" class="product-link">
                         <img class="lazyload" src="/images/loading.gif" data-src="/images/product/test/product-3.jpg" alias="Đai nịt bụng hương quế thảo dược KidsPlaza HQ21" onerror="this.onerror=null;this.src=&quot;/images/error.png&quot;;">
                     </a>
                 </div>
                 <div class="product-content">
                     <div class="product-name">
                         <h3 class="name">
-                            <a href="" title="Đai nịt bụng hương quế thảo dược KidsPlaza HQ21">Đai nịt bụng hương quế thảo dược KidsPlaza HQ21</a>
+                            <a href="product" title="Đai nịt bụng hương quế thảo dược KidsPlaza HQ21">Đai nịt bụng hương quế thảo dược KidsPlaza HQ21</a>
                         </h3>
                     </div>
                     <div class="product-price">
@@ -162,14 +180,14 @@ class HopeHtmlHelper
             </div>
             <div class="product-item">
                 <div class="product-head">
-                    <a href="" class="product-link">
+                    <a href="product" class="product-link">
                         <img class="lazyload" src="/images/loading.gif" data-src="/images/product/test/product-4.jpg" alias="Sữa bột Glico số 0 800g nội địa Nhật cho bé 0M-12M" onerror="this.onerror=null;this.src=&quot;/images/error.png&quot;;">
                     </a>
                 </div>
                 <div class="product-content">
                     <div class="product-name">
                         <h3 class="name">
-                            <a href="" title="Sữa bột Glico số 0 800g nội địa Nhật cho bé 0M-12M">Sữa bột Glico số 0 800g nội địa Nhật cho bé 0M-12M</a>
+                            <a href="product" title="Sữa bột Glico số 0 800g nội địa Nhật cho bé 0M-12M">Sữa bột Glico số 0 800g nội địa Nhật cho bé 0M-12M</a>
                         </h3>
                     </div>
                     <div class="product-price">
@@ -206,14 +224,14 @@ class HopeHtmlHelper
             </div>
             <div class="product-item">
                 <div class="product-head">
-                    <a href="" class="product-link">
+                    <a href="product" class="product-link">
                         <img class="lazyload" src="/images/loading.gif" data-src="/images/product/test/product-5.jpg" alias="Sữa Blackmores số 3 Toddler 900g (>12 tháng)" onerror="this.onerror=null;this.src=&quot;/images/error.png&quot;;">
                     </a>
                 </div>
                 <div class="product-content">
                     <div class="product-name">
                         <h3 class="name">
-                            <a href="" title="Sữa Blackmores số 3 Toddler 900g (>12 tháng)">Sữa Blackmores số 3 Toddler 900g (>12 tháng)</a>
+                            <a href="product" title="Sữa Blackmores số 3 Toddler 900g (>12 tháng)">Sữa Blackmores số 3 Toddler 900g (>12 tháng)</a>
                         </h3>
                     </div>
                     <div class="product-price">
@@ -247,14 +265,14 @@ class HopeHtmlHelper
             </div>
             <div class="product-item">
                 <div class="product-head">
-                    <a href="" class="product-link">
+                    <a href="product" class="product-link">
                         <img class="lazyload" src="/images/loading.gif" data-src="/images/product/test/product-6.jpg" alias="Sữa bột Hipp số 4 Organic Combiotic HMP 800g cho bé trên 3 tuổi" onerror="this.onerror=null;this.src=&quot;/images/error.png&quot;;">
                     </a>
                 </div>
                 <div class="product-content">
                     <div class="product-name">
                         <h3 class="name">
-                            <a href="" title="Sữa bột Hipp số 4 Organic Combiotic HMP 800g cho bé trên 3 tuổi">Sữa bột Hipp số 4 Organic Combiotic HMP 800g cho bé trên 3 tuổi</a>
+                            <a href="product" title="Sữa bột Hipp số 4 Organic Combiotic HMP 800g cho bé trên 3 tuổi">Sữa bột Hipp số 4 Organic Combiotic HMP 800g cho bé trên 3 tuổi</a>
                         </h3>
                     </div>
                     <div class="product-price">
@@ -288,14 +306,14 @@ class HopeHtmlHelper
             </div>
             <div class="product-item">
                 <div class="product-head">
-                    <a href="" class="product-link">
+                    <a href="product" class="product-link">
                         <img class="lazyload" src="/images/loading.gif" data-src="/images/product/test/product-7.jpg" alias="Sữa Nan Supreme Thụy Sỹ số 3 (800gr) cho bé 2-6 tuổi" onerror="this.onerror=null;this.src=&quot;/images/error.png&quot;;">
                     </a>
                 </div>
                 <div class="product-content">
                     <div class="product-name">
                         <h3 class="name">
-                            <a href="" title="Sữa Nan Supreme Thụy Sỹ số 3 (800gr) cho bé 2-6 tuổi">Sữa Nan Supreme Thụy Sỹ số 3 (800gr) cho bé 2-6 tuổi</a>
+                            <a href="product" title="Sữa Nan Supreme Thụy Sỹ số 3 (800gr) cho bé 2-6 tuổi">Sữa Nan Supreme Thụy Sỹ số 3 (800gr) cho bé 2-6 tuổi</a>
                         </h3>
                     </div>
                     <div class="product-price">
@@ -329,14 +347,14 @@ class HopeHtmlHelper
             </div>
             <div class="product-item">
                 <div class="product-head">
-                    <a href="" class="product-link">
+                    <a href="product" class="product-link">
                         <img class="lazyload" src="/images/loading.gif" data-src="/images/product/test/product-8.jpg" alias="Bỉm - tã quần Merries size M 58 miếng (cho bé 6-11kg)" onerror="this.onerror=null;this.src=&quot;/images/error.png&quot;;">
                     </a>
                 </div>
                 <div class="product-content">
                     <div class="product-name">
                         <h3 class="name">
-                            <a href="" title="Bỉm - tã quần Merries size M 58 miếng (cho bé 6-11kg)">Bỉm - tã quần Merries size M 58 miếng (cho bé 6-11kg)</a>
+                            <a href="product" title="Bỉm - tã quần Merries size M 58 miếng (cho bé 6-11kg)">Bỉm - tã quần Merries size M 58 miếng (cho bé 6-11kg)</a>
                         </h3>
                     </div>
                     <div class="product-price">
@@ -370,14 +388,14 @@ class HopeHtmlHelper
             </div>
             <div class="product-item">
                 <div class="product-head">
-                    <a href="" class="product-link">
+                    <a href="product" class="product-link">
                         <img class="lazyload" src="/images/loading.gif" data-src="/images/product/test/product-9.jpg" alias="Sữa bột Nestle Nan Optipro HMO số 4 900gr cho bé 2-6 tuổi" onerror="this.onerror=null;this.src=&quot;/images/error.png&quot;;">
                     </a>
                 </div>
                 <div class="product-content">
                     <div class="product-name">
                         <h3 class="name">
-                            <a href="" title="Sữa bột Nestle Nan Optipro HMO số 4 900gr cho bé 2-6 tuổi">Sữa bột Nestle Nan Optipro HMO số 4 900gr cho bé 2-6 tuổi</a>
+                            <a href="product" title="Sữa bột Nestle Nan Optipro HMO số 4 900gr cho bé 2-6 tuổi">Sữa bột Nestle Nan Optipro HMO số 4 900gr cho bé 2-6 tuổi</a>
                         </h3>
                     </div>
                     <div class="product-price">
