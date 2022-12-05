@@ -19,7 +19,7 @@ $this->image = '/images/logo.png';
             <div class="category-content">
                 <ul class="category-list">
                     <li class="category-item">
-                        <a href="" class="category-item-title"><span>Mẹ bầu và sau sinh</span><i class="fa fa-angle-right"></i></a>
+                        <a href="/category" class="category-item-title"><span>Mẹ bầu và sau sinh</span><i class="fa fa-angle-right"></i></a>
                         <ul class="category-list-child mega-menu-lv-1">
                             <div class="block-center">
                                 <li class="item">
