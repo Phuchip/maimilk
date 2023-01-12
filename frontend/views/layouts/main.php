@@ -50,6 +50,7 @@ AppAsset::register($this);
     <link rel="stylesheet" href="/font-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="/tooltipster/css/tooltipster.bundle.min.css">
     <link rel="stylesheet" href="/slick/slick.min.css">
+    <link href="/css/select2.min.css" rel="stylesheet" />
     <script src="/js/jquery.min.js"></script>
 </head>
 <body class="d-flex flex-column h-100">
@@ -75,9 +76,13 @@ AppAsset::register($this);
 <?php $this->endBody() ?>
 <script src="/js/lazysizes.min.js"></script>
 <script src="/slick/slick.min.js"></script>
+<script src="/js/select2.min.js"></script>
 <script src="/js/home.js"></script>
 <script src="/js/detail.js"></script>
 <script src="/js/notifications.js"></script>
+<?php if($this->js): ?>
+    <script src="<?= $this->js ?>"></script>
+<?php endif; ?>
 </body>
 </html>
 <?php $this->endPage();

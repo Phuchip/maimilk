@@ -52,6 +52,39 @@ class HopeHtmlHelper
         return $html;
     }
 
+    public function pagination($current_page,$total_page)
+    {
+        $html = '<ul class="pagination justify-content-center">';
+        if ($current_page > 1 && $total_page > 1){
+            $html .= '<li class="page-item show" value="'.($current_page-1).'"><a class="page-link" href="javascript:void(0)"><i class="fa fa-angle-left" aria-hidden="true"></i></a></li>';
+        }else{
+            $html .= '<li class="page-item hide"><a class="page-link" href="javascript:void(0)"><i class="fa fa-angle-left" aria-hidden="true"></i></a></li>';
+        }
+        for ($i = 1; $i <= $total_page; $i++){
+            if ($i == $current_page){
+                $html .= '<li class="page-item active"><a class="page-link" href="javascript:void(0)">'.$i.'</a></li>';
+            }else{
+                if($i == 1){ //First
+                    $html .= '<li class="page-item" value="'.$i.'"><a class="page-link" href="javascript:void(0)">'.$i.'</a></li>';
+                }elseif($i == $total_page){ //Last
+                    $html .= '<li class="page-item" value="'.$total_page.'"><a class="page-link" href="javascript:void(0)">'.$total_page.'</a></li>';
+                }else{
+                    if(($current_page - 2 <= $i && $i < $current_page)||($current_page + 2 >= $i && $i > $current_page)){
+                        $html .= '<li class="page-item" value='.$i.'><a class="page-link" href="javascript:void(0)">'.$i.'</a></li>';
+                    }
+                }
+            }
+            
+        }
+        if ($current_page < $total_page && $total_page > 1){
+            $html .= '<li class="page-item show" value='.($current_page+1).'><a class="page-link" href="javascript:void(0)"><i class="fa fa-angle-right" aria-hidden="true"></i></a></li>';
+        }else{
+            $html .= '<li class="page-item hide"><a class="page-link" href="javascript:void(0)"><i class="fa fa-angle-right" aria-hidden="true"></i></a></li>';
+        }
+        $html .= '</ul>';
+        return $html;
+    }
+
     public function createProductTest()
     {
         $html = '';

@@ -1,20 +1,3 @@
-.breadcrumb-item + .breadcrumb-item::before{
-    content: "›";
-}
-.breadcrumb{
-    padding: 0.5rem;
-}
-.breadcrumb-items{
-    display: flex;
-    flex-wrap: wrap;
-    padding-inline-start: 0.5rem;
-}
-.breadcrumb-item a{
-    color: #767676;
-}
-.breadcrumb-item.active span{
-    color: #2767a5;
-}
 #thumbnail-items .slick-slide{
     margin: 5px;
     padding: 5px;

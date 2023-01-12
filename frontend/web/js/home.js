@@ -12,6 +12,7 @@ function notification(theme,message,position=null) {
         message: message
     });
 }
+$('select').select2();
 $('#search-box').keyup(function() {
     var text = $(this).val();
     if (text.length > 0) {

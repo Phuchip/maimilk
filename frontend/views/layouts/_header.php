@@ -53,6 +53,13 @@ use common\components\HopeImageHelper;
                     <div class="icon">
                         <i class="fa fa-shopping-cart"></i>
                     </div>
+                    <div class="mini-cart">
+                        <div class="mini-cart-content">
+                            <div class="minicart-content">
+                                
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
