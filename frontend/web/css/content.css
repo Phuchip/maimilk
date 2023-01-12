@@ -159,6 +159,8 @@ main .content{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     border-top: solid .1rem #eee;
+    border-left: solid .1rem #eee;
+    border-right: solid .1rem #eee;
 }
 .product-item{
     padding: 1rem;

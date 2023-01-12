@@ -16,6 +16,10 @@
     -webkit-box-shadow: inset 0 -1px 0 0 #dfe1e6;
     -o-box-shadow: inset 0 -1px 0 0 #dfe1e6;
     text-transform: uppercase;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
 }
 .sidebar-content {
     padding-top: 10px;
@@ -48,4 +52,9 @@ span.count::before{
 }
 span.count::after{
     content: ")";
+}
+/* Main */
+.column-content .list-product{
+    grid-template-columns : 1fr 1fr 1fr 1fr;
+    border-left: solid 0.1rem #eee;
 }

@@ -80,7 +80,9 @@ AppAsset::register($this);
 <script src="/js/home.js"></script>
 <script src="/js/detail.js"></script>
 <script src="/js/notifications.js"></script>
-
+<?php if($this->js): ?>
+    <script src="<?= $this->js ?>"></script>
+<?php endif; ?>
 </body>
 </html>
 <?php $this->endPage();
